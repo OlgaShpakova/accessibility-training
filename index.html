@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=5">
   <title>Web Accessibility 2019 Q1 BY</title>
-  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css'>
-  <link rel='stylesheet prefetch' href='https://use.fontawesome.com/releases/v5.0.10/css/all.css'>
-  <link rel="stylesheet prefetch" href="css/styles.css">
+  <meta name="title" content="Web Accessibility 2019 Q1 BY">
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css' type="text/css">
+  <link rel='stylesheet prefetch' href='https://use.fontawesome.com/releases/v5.0.10/css/all.css' type="text/css">
+  <link rel="stylesheet prefetch" href="css/styles.css" type="text/css">
 </head>
 
 <body>
+  <a href="#top-section" class="a11y-skip">Skip navigation</a>
   <div class="hero hero-bg is-fullheight">
-    <div class="hero-head">
+    <header class="hero-head">
       <div class="navbar">
         <div class="container">
           <div class="navbar-brand">
-            <a class="navbar-item has-text-white">
-              <img src="https://www.epam.com/content/dam/epam/global/logo_white-blue.svg" style="width: 100%;">
+            <a class="navbar-item has-text-white" href="/">
+              <img src="https://www.epam.com/content/dam/epam/global/logo_white-blue.svg" style="width: 100%;" alt="Company logo">
             </a>
             <span class="navbar-burger burger" data-target="navbarMenu">
               <span></span>
@@ -25,10 +29,10 @@
             </span>
           </div>
 
-          <div id="navbarMenu" class="navbar-menu">
+          <nav id="navbarMenu" class="navbar-menu">
             <div class="navbar-end">
               <span class="navbar-item">
-                <a class="button is-white is-outlined">
+                <a class="button is-white is-outlined" href="/">
                   <span class="icon">
                     <i class="fa fa-home"></i>
                   </span>
@@ -36,7 +40,7 @@
                 </a>
               </span>
               <span class="navbar-item">
-                <a class="button is-white is-outlined">
+                <a class="button is-white is-outlined" href="/">
                   <span class="icon">
                     <i class="fab fa-superpowers"></i>
                   </span>
@@ -44,7 +48,7 @@
                 </a>
               </span>
               <span class="navbar-item">
-                <a class="button is-white is-outlined">
+                <a class="button is-white is-outlined" href="/">
                   <span class="icon">
                     <i class="fa fa-book"></i>
                   </span>
@@ -52,7 +56,7 @@
                 </a>
               </span>
               <span class="navbar-item">
-                <a class="button is-white is-outlined">
+                <a class="button is-white is-outlined" href="/">
                   <span class="icon">
                     <i class="fab fa-github"></i>
                   </span>
@@ -60,27 +64,30 @@
                 </a>
               </span>
             </div>
-          </div>
+          </nav>
         </div>
       </div>
-    </div>
+    </header>
 
+    <div id="top-section">
     <div class="hero-body">
       <div class="container has-text-centered">
         <div class="column is-6 is-offset-3">
-          <div class="title has-text-white">Engineering the Future</div>
+          <h1 class="title has-text-white">Engineering the Future</h1>
           <div class="subtitle has-text-white">
             $this is the best software platform for running an internet business. We handle billions of dollars every year for forward-thinking businesses around the world.
           </div>
           <div class="box">
-            <div class="field is-grouped">
+            <form class="field is-grouped" action="#" method="get">
               <p class="control is-expanded">
-                <input class="input">
+                <label class="control is-expanded visuallyhidden" for="usermail"> Your email</label>
+                <input type="text" class="input" id="usermail">
               </p>
               <p class="control">
-                <a class="button is-info">Notify Me</a>
+                <label for="getnotifications" class="visuallyhidden">Notify Me</label>
+                <button type="submit" id="getnotifications" class="button is-info">Notify Me</button>
               </p>
-            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -91,16 +98,18 @@
         <span class="tag is-primary">New</span> Headless CMS improves customer experience and offers greater flexibility
       </div>
     </div>
+    </div>
   </div>
 
-  <div class="section" id="about">
+  <main>
+  <section class="section" id="about" aria-labelledby="sectionHeading">
     <div class="section-heading has-text-centered">
-      <div class="title is-2">About Us</div>
+      <h2 class="title is-2" id="sectionHeading">About Us</h2>
       <div class="subtitle is-5">We of all trades, master of "some"</div>
       <div class="container">
-        <p>Web developers with more than <b>4 years</b> of well-rounded experience with a degree in the
+        <p>Web developers with more than <strong>4 years</strong> of well-rounded experience with a degree in the
           field of
-          <b>Computer Science</b>, extensive knowledge of modern Web techniques and love for <b>Coffee</b>.
+          <strong>Computer Science</strong>, extensive knowledge of modern Web techniques and love for <strong>Coffee</strong>.
           Looking for an opportunity to work and upgrade, as well as being involved in an organization that
           believes
           in gaining a competitive edge and giving back to the community.</p>
@@ -111,32 +120,37 @@
       <div class="column">
         <div class="card">
           <div class="card-content">
-            <div class="title is-4">Profile</div>
+            <h3 class="title is-4">Profile</h3>
 
             <div class="content">
               <table class="table-profile">
+                <caption><span class="visuallyhidden">Profile data</span></caption>
+                <thead>
                 <tr>
-                  <th colspan="1"></th>
-                  <th colspan="2"></th>
+                  <th></th>
+                  <th></th>
                 </tr>
+                </thead>
+                <tbody>
                 <tr>
                   <td>Address:</td>
                   <td>Guru's Lab</td>
                 </tr>
                 <tr>
                   <td>Phone:</td>
-                  <td><a>0123-456789</a></td>
+                  <td><a href="" title="company phone number">0123-456789</a></td>
                 </tr>
                 <tr>
                   <td>Email:</td>
-                  <td><a>minion@despicable.me</a></td>
+                  <td><a href="mailto:minion@despicable.me" title="company email">minion@despicable.me</a></td>
                 </tr>
+                </tbody>
               </table>
             </div>
             <br>
             <div class="buttons has-addons is-centered">
-              <a class="button is-link">Github</a>
-              <a class="button is-link">LinkedIn</a>
+              <a class="is-link" href="https://github.com/" target="_blank"><span class="icon is-small"><i class="fas fa-external-link-alt"></i></span> Github</a>
+              <a class="is-link" href="https://www.linkedin.com/" target="_blank"><span class="icon is-small"><i class="fas fa-external-link-alt"></i></span> LinkedIn</a>
             </div>
           </div>
         </div>
@@ -146,7 +160,7 @@
         <div class="card">
           <div class="card-image">
             <div class="image">
-              <img src="https://source.unsplash.com/random/300x300/?sig=22"div>
+              <img src="https://source.unsplash.com/random/300x300/?sig=22" alt="Random image for column">
             </div>
           </div>
         </div>
@@ -155,13 +169,13 @@
       <div class="column">
         <div class="card">
           <div class="card-content skills-content">
-            <div class="title is-4">Skills</div>
+            <h3 class="title is-4">Skills</h3>
             <div class="content">
               <div class="media">
                 <div class="media-content">
                   <div class="content">
                     <p>
-                      <b>JavaScript:</b>
+                      <strong>JavaScript:</strong>
                       <br>
                       <progress class="progress is-primary" value="90" max="100"></progress>
                     </p>
@@ -173,7 +187,7 @@
                 <div class="media-content">
                   <div class="content">
                     <p>
-                      <b>Vue.js:</b>
+                      <strong>Vue.js:</strong>
                       <br>
                       <progress class="progress is-primary" value="90" max="100"></progress>
                     </p>
@@ -185,7 +199,7 @@
                 <div class="media-content">
                   <div class="content">
                     <p>
-                      <b>Node.js:</b>
+                      <strong>Node.js:</strong>
                       <br>
                       <progress class="progress is-primary" value="75" max="100"></progress>
                     </p>
@@ -197,7 +211,7 @@
                 <div class="media-content">
                   <div class="content">
                     <p>
-                      <b>HTML5/CSS3</b>
+                      <strong>HTML5/CSS3</strong>
                       <br>
                       <progress class="progress is-primary" value="95" max="100"></progress>
                     </p>
@@ -209,7 +223,7 @@
                 <div class="media-content">
                   <div class="content">
                     <p>
-                      <b>Databases</b>
+                      <strong>Databases</strong>
                       <br>
                       <progress class="progress is-primary" value="66" max="100"></progress>
                     </p>
@@ -221,10 +235,11 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="has-background-danger">
+  <section class="has-background-danger" aria-labelledby="statisticHeading">
     <div class="info-tiles container">
+      <h2 class="visuallyhidden" id="statisticHeading">Company statistic</h2>
       <div class="tile is-ancestor has-text-centered">
           <div class="tile is-parent">
             <div class="tile is-child box">
@@ -252,12 +267,12 @@
           </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="hero has-background-grey-light">
+  <section class="hero has-background-grey-light" aria-labelledby="featureHeading">
     <div class="container features">
       <div class="section-heading has-text-centered">
-        <div class="title is-2">Three key features</div>
+        <h2 class="title is-2" id="featureHeading">Three key features</h2>
         <div class="subtitle is-5">We don't hide what we do</div>
       </div>
 
@@ -271,7 +286,7 @@
               <div class="content">
                 <div>Tristique senectus et netus et.</div>
                 <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut consequat semper viverra nam.</p>
-                <p><a>Learn more</a></p>
+                <p><a href="/">Learn more</a></p>
               </div>
             </div>
           </div>
@@ -287,7 +302,7 @@
                 <div>Tempor orci dapibus ultrices in.</div>
                 <p>Ut venenatis tellus in metus vulputate. Amet consectetur adipiscing elit pellentesque. Sed arcu non odio euismod lacinia at quis risus. Faucibus turpis in eu mi bibendum neque egestas cmonsu songue. Phasellus vestibulum lorem
                   sed risus.</p>
-                <p><a>Learn more</a></p>
+                <p><a href="/">Learn more</a></p>
               </div>
             </div>
           </div>
@@ -302,61 +317,61 @@
               <div class="content">
                 <div> Leo integer malesuada nunc vel risus. </div>
                 <p>Imperdiet dui accumsan sit amet nulla facilisi morbi. Fusce ut placerat orci nulla pellentesque dignissim enim. Libero id faucibus nisl tincidunt eget nullam. Commodo viverra maecenas accumsan lacus vel facilisis.</p>
-                <p><a>Learn more</a></p>
+                <p><a href="/">Learn more</a></p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="hero is-info">
+  <section class="hero is-info" aria-labelledby="topicsHeading">
     <div class="hero-body">
       <div class="container">
-        <div class="title">List of topics</div>
+        <h2 class="title" id="topicsHeading">List of topics</h2>
         <div class="subtitle">We are always in touch we the outside world</div>
       </div>
     </div>
     <div class="tabs is-boxed is-centered main-menu" id="nav">
       <ul>
         <li data-target="pane-1" id="1">
-          <a>
+          <a href="#1">
             <span class="icon is-small"><i class="fa fa-image"></i></span>
-            <span>Pictures</span>
+            <h3>Pictures</h3>
           </a>
         </li>
         <li data-target="pane-2" id="2" class="is-active">
-          <a>
+          <a href="#2">
             <span class="icon is-small"><i class="fab fa-empire"></i></span>
-            <span>Article</span>
+            <h3>Article</h3>
           </a>
         </li>
         <li data-target="pane-3" id="3">
-          <a>
+          <a href="#3">
             <span class="icon is-small"><i class="fab fa-superpowers"></i></span>
-            <span>Team</span>
+            <h3>Team</h3>
           </a>
         </li>
         <li data-target="pane-4" id="4">
-          <a>
+          <a href="#4">
             <span class="icon is-small"><i class="fa fa-film"></i></span>
-            <span>Video</span>
+            <h3>Video</h3>
           </a>
         </li>
       </ul>
     </div>
-  </div>
+  </section>
 
   <div class="tab-content container">
-    <div class="tab-pane" id="pane-1" class="level">
+    <div class="tab-pane level" id="pane-1">
       <div class="container">
         <div class="columns features">
           <div class="column is-4">
             <div class="card">
               <div class="card-image">
                 <div class="image is-4by3">
-                  <img src="https://source.unsplash.com/random/?sig=1" class="modal-button" data-target="modal-image1">
+                  <img src="https://source.unsplash.com/random/?sig=1" class="modal-button" data-target="modal-image1" alt="Gallery picture number 1">
                 </div>
               </div>
               <div class="card-content">
@@ -372,7 +387,7 @@
             <div class="card">
               <div class="card-image">
                 <div class="image is-4by3">
-                  <img src="https://source.unsplash.com/random/?sig=2">
+                  <img src="https://source.unsplash.com/random/?sig=2" alt="Gallery picture number 2">
                 </div>
               </div>
               <div class="card-content">
@@ -389,7 +404,7 @@
             <div class="card">
               <div class="card-image">
                 <div class="image is-4by3">
-                  <img src="https://source.unsplash.com/random/?sig=3" class="modal-button" data-target="modal-image2">
+                  <img src="https://source.unsplash.com/random/?sig=3" class="modal-button" data-target="modal-image2" alt="Gallery picture number 3">
                 </div>
               </div>
               <div class="card-content">
@@ -415,7 +430,7 @@
             <div class="media-content">
               <div class="content">
                 <p>
-                  <a><b>Dominic Ipsum</b></a>
+                  <a href=""><strong>Dominic Ipsum</strong></a>
                   <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
                 </p>
               </div>
@@ -428,7 +443,7 @@
             <div class="media-content">
               <div class="content">
                 <p>
-                  <a><b>Cassie Ipsum</b></a>
+                  <a href=""><strong>Cassie Ipsum</strong></a>
                   <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
                 </p>
               </div>
@@ -443,7 +458,7 @@
             <div class="media-content">
               <div class="content">
                 <p>
-                  <a><b>Avery Ipsum</b></a>
+                  <a href=""><strong>Avery Ipsum</strong></a>
                   <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
                 </p>
               </div>
@@ -456,7 +471,7 @@
             <div class="media-content">
               <div class="content">
                 <p>
-                  <a><b>io Ipsum</b></a>
+                  <a href=""><strong>io Ipsum</strong></a>
                   <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
                 </p>
               </div>
@@ -471,7 +486,7 @@
         <div class="column is-three-quarters">
           <div class="title has-text-centered">Inspired video</div>
           <div class="embed-container image">
-            <iframe src="https://player.vimeo.com/video/261794608" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+            <iframe src="https://player.vimeo.com/video/261794608" allowFullScreen></iframe>
           </div>
         </div>
       </div>
@@ -482,7 +497,7 @@
         <div class="is-1 title">Hello World</div>
         <p>Lorem ipsum<sup><a>[1]</a></sup> dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque. Sub<sub>script</sub> works as well!</p>
         <div class="is-2 title">Second level</div>
-        <p>Curabitur accumsan turpis pharetra <b>augue tincidunt</b> blandit. Quisque condimentum maximus mi, sit amet commodo arcu rutrum id. Proin pretium urna vel cursus venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.</p>
+        <p>Curabitur accumsan turpis pharetra <strong>augue tincidunt</strong> blandit. Quisque condimentum maximus mi, sit amet commodo arcu rutrum id. Proin pretium urna vel cursus venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.</p>
         <ul>
           <li>In fermentum leo eu lectus mollis, quis dictum mi aliquet.</li>
           <li>Morbi eu nulla lobortis, lobortis est in, fringilla felis.</li>
@@ -557,9 +572,9 @@
         <div class="is-5 title">Fifth level</div>
         <p>Aliquam sagittis rhoncus vulputate. Cras non luctus sem, sed tincidunt ligula. Vestibulum at nunc elit. Praesent aliquet ligula mi, in luctus elit volutpat porta. Phasellus molestie diam vel nisi sodales, a eleifend augue laoreet. Sed nec eleifend justo. Nam et sollicitudin odio.</p>
         <figure>
-          <img src="https://source.unsplash.com/random/256x256/?sig=10">
-          <img src="https://source.unsplash.com/random/256x256/?sig=11">
-          <img src="https://source.unsplash.com/random/256x256/?sig=12">
+          <img src="https://source.unsplash.com/random/256x256/?sig=10" alt="Beautiful placeholder">
+          <img src="https://source.unsplash.com/random/256x256/?sig=11" alt="Wierd picture">
+          <img src="https://source.unsplash.com/random/256x256/?sig=12" alt="I don't know what it is">
           <figcaption>
             Figure 1: Some beautiful placeholders
           </figcaption>
@@ -570,10 +585,10 @@
     </div>
   </div>
 
-  <div class="section has-background-grey-lighter">
+  <section class="section has-background-grey-lighter" aria-labelledby="tourHeading">
     <div class="container has-text-centered">
         <div class="section-heading has-text-centered">
-          <div class="title is-2">Tours</div>
+          <h2 class="title is-2" id="tourHeading">Tours</h2>
           <div class="subtitle is-5">Outcoming dates for the best options</div>
         </div>
 
@@ -581,31 +596,31 @@
         <div class="tile is-parent">
           <div class="tile is-child box">
             <div class="image">
-              <img src="https://source.unsplash.com/random/256x170/?sig=100">
+              <img src="https://source.unsplash.com/random/256x170/?sig=100" alt="New York is calling">
             </div>
             <p class="title">New York</p>
             <p class="subtitle">Fri 27 Nov 2016</p>
-            <a class="button">Buy Tickets</a>
+            <a href="" class="button">Buy Tickets</a>
           </div>
         </div>
         <div class="tile is-parent">
           <div class="tile is-child box">
             <div class="image">
-              <img src="https://source.unsplash.com/random/256x170/?sig=101">
+              <img src="https://source.unsplash.com/random/256x170/?sig=101" alt="Los Angeles attractions">
             </div>
             <p class="title">Los Angeles</p>
             <p class="subtitle">Fri 27 Nov 2016</p>
-            <a class="button">Buy Tickets</a>
+            <a href="" class="button">Buy Tickets</a>
           </div>
         </div>
         <div class="tile is-parent">
           <div class="tile is-child box">
             <div class="image">
-              <img src="https://source.unsplash.com/random/256x170/?sig=102">
+              <img src="https://source.unsplash.com/random/256x170/?sig=102" alt="Have you ever been to Mexico?">
             </div>
             <p class="title">Mexico</p>
             <p class="subtitle">Fri 27 Nov 2016</p>
-            <a class="button">Buy Tickets</a>
+            <a href="" class="button">Buy Tickets</a>
           </div>
         </div>
       </div>
@@ -614,57 +629,57 @@
         <div class="tile is-parent">
           <div class="tile is-child box">
             <div class="image">
-              <img src="https://source.unsplash.com/random/256x170/?sig=103">
+              <img src="https://source.unsplash.com/random/256x170/?sig=103" alt="Dream Paris">
             </div>
             <p class="title">Paris</p>
             <p class="subtitle">Fri 27 Nov 2016</p>
-            <a class="button">Buy Tickets</a>
+            <a href="" class="button">Buy Tickets</a>
           </div>
         </div>
         <div class="tile is-parent">
           <div class="tile is-child box">
             <div class="image">
-              <img src="https://source.unsplash.com/random/256x170/?sig=104">
+              <img src="https://source.unsplash.com/random/256x170/?sig=104" alt="November in Tokio">
             </div>
             <p class="title">Tokio</p>
             <p class="subtitle">Fri 27 Nov 2016</p>
-            <a class="button">Buy Tickets</a>
+            <a href="" class="button">Buy Tickets</a>
           </div>
         </div>
         <div class="tile is-parent">
           <div class="tile is-child box">
             <div class="image">
-              <img src="https://source.unsplash.com/random/256x170/?sig=105">
+              <img src="https://source.unsplash.com/random/256x170/?sig=105" alt="London is the best city in the world">
             </div>
             <p class="title">London</p>
             <p class="subtitle">Fri 27 Nov 2016</p>
-            <a class="button">Buy Tickets</a>
+            <a href="" class="button">Buy Tickets</a>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="section">
+  <section class="section" aria-labelledby="serviceHeading">
     <div class="section-heading has-text-centered">
-      <div class="title is-2">Services</div>
+      <h2 class="title is-2" id="serviceHeading">Services</h2>
       <div class="subtitle is-5">What can I do for you?</div>
     </div>
     <div class="container">
       <div class="columns">
         <div class="column">
-          <a class="box">
+          <a href="" class="box">
             <div class="content">
-              <div class="title is-5">Front End Web Development</div>
+              <h5 class="title is-5">Front End Web Development</h5>
               Develop Front End using latest standards with HTML5/CSS3 with added funtionality using JavaScript and
               Vue.js.
             </div>
           </a>
         </div>
         <div class="column">
-          <a class="box">
+          <a href="" class="box">
             <div class="content">
-              <div class="title is-5">Back End Web Development</div>
+              <h5 class="title is-5">Back End Web Development</h5>
               Develop Back End application/service using Node.js or ASP .NET and SQL server or Mongo DB databases.
             </div>
           </a>
@@ -673,30 +688,30 @@
 
       <div class="columns">
         <div class="column">
-          <a class="box">
+          <a href="" class="box">
             <div class="content">
-              <div class="title is-5">Front End Web Development</div>
+              <h5 class="title is-5">Front End Web Development</h5>
               Develop Front End using latest standards with HTML5/CSS3 with added funtionality using JavaScript and
               Vue.js.
             </div>
           </a>
         </div>
         <div class="column">
-          <a class="box">
+          <a href="" class="box">
             <div class="content">
-              <div class="title is-5">Back End Web Development</div>
+              <h5 class="title is-5">Back End Web Development</h5>
               Develop Back End application/service using Node.js or ASP .NET and SQL server or Mongo DB databases.
             </div>
           </a>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="section has-background-grey-lighter">
+  <section class="section has-background-grey-lighter" aria-labelledby="portfolioHeading">
     <div class="container">
       <div class="section-heading has-text-centered">
-        <div class="title is-2">Portfolio</div>
+        <h2 class="title is-2" id="portfolioHeading">Portfolio</h2>
         <div class="subtitle is-5">Our latest works</div>
       </div>
 
@@ -718,12 +733,12 @@
               </div>
               <div class="card-content">
                 <div class="image">
-                  <img src="https://source.unsplash.com/random/300x200/?sig=201">
+                  <img src="https://source.unsplash.com/random/300x200/?sig=201" alt="Portfolio admin project">
                 </div>
               </div>
               <div class="card-footer">
-                <a class="card-footer-item">Preview</a>
-                <a class="card-footer-item">Source Code</a>
+                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Preview</span></a>
+                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Source Code</span></a>
               </div>
             </div>
           </div>
@@ -743,13 +758,13 @@
               </div>
               <div class="card-content">
                 <div class="image">
-                  <img src="https://source.unsplash.com/random/300x200/?sig=202">
+                  <img src="https://source.unsplash.com/random/300x200/?sig=202" alt="It's all about cards">
                 </div>
               </div>
               <div class="card-footer">
-                <a class="card-footer-item">Preview</a>
-                <a class="card-footer-item">Source Code</a>
-                </div>
+                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Preview</span></a>
+                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Source Code</span></a>
+              </div>
             </div>
           </div>
           <div class="column is-4">
@@ -768,12 +783,12 @@
               </div>
               <div class="card-content">
                 <div class="image">
-                  <img src="https://source.unsplash.com/random/300x200/?sig=203">
+                  <img src="https://source.unsplash.com/random/300x200/?sig=203" alt="Forum for professionals">
                 </div>
               </div>
               <div class="card-footer">
-                <a class="card-footer-item">Preview</a>
-                <a class="card-footer-item">Source Code</a>
+                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Preview</span></a>
+                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Source Code</span></a>
               </div>
             </div>
           </div>
@@ -795,12 +810,12 @@
               </div>
               <div class="card-content">
                 <div class="image">
-                  <img src="https://source.unsplash.com/random/300x200/?sig=204">
+                  <img src="https://source.unsplash.com/random/300x200/?sig=204" alt="It's time for Instagram">
                 </div>
               </div>
               <div class="card-footer">
-                <a class="card-footer-item">Preview</a>
-                <a class="card-footer-item">Source Code</a>
+                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Preview</span></a>
+                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Source Code</span></a>
               </div>
             </div>
           </div>
@@ -820,12 +835,12 @@
               </div>
               <div class="card-content">
                 <div class="image">
-                  <img src="https://source.unsplash.com/random/300x200/?sig=205">
+                  <img src="https://source.unsplash.com/random/300x200/?sig=205" alt="Landing page for your business">
                 </div>
               </div>
               <div class="card-footer">
-                <a class="card-footer-item">Preview</a>
-                <a class="card-footer-item">Source Code</a>
+                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Preview</span></a>
+                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Source Code</span></a>
               </div>
             </div>
           </div>
@@ -845,31 +860,30 @@
               </div>
               <div class="card-content">
                 <div class="image">
-                  <img src="https://source.unsplash.com/random/300x200/?sig=206">
+                  <img src="https://source.unsplash.com/random/300x200/?sig=206" alt="Marketing strategy is important step">
                 </div>
               </div>
               <div class="card-footer">
-                <a class="card-footer-item">Preview</a>
-                <a class="card-footer-item">Source Code</a>
+                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Preview</span></a>
+                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Source Code</span></a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    </div>
-  </div>
+  </section>
 
-  <div class="section">
+  <section class="section" aria-labelledby="forumHeading">
     <div class="container">
       <div class="section-heading has-text-centered">
-        <div class="title is-2">Forum</div>
+        <h2 class="title is-2" id="forumHeading">Forum</h2>
         <div class="subtitle is-5">Discuss any topic with no leaving this page</div>
       </div>
 
       <div class="columns">
         <div class="column is-3">
-          <a class="button is-primary is-block is-alt is-large">New Post</a>
+          <a href="" class="button is-primary is-block is-alt is-large">New Post</a>
           <div class="menu">
             <ul class="menu-list forum-list">
               <li><span class="tag is-primary is-medium">Dashboard</span></li>
@@ -885,11 +899,11 @@
         <div class="column is-9">
           <div class="box content">
             <div class="post">
-              <h4>How do you center a button in a box?</h4>
+              <h5>How do you center a button in a box?</h5>
               <div class="media">
                 <div class="media-left">
                   <p class="image is-32x32">
-                    <img src="https://source.unsplash.com/random/64x64/?sig=300">
+                    <img src="https://source.unsplash.com/random/64x64/?sig=300" alt="User avatar">
                   </p>
                 </div>
                 <div class="media-content">
@@ -911,7 +925,7 @@
               <div class="media">
                 <div class="media-left">
                   <p class="image is-32x32">
-                    <img src="https://source.unsplash.com/random/64x64/?sig=301">
+                    <img src="https://source.unsplash.com/random/64x64/?sig=301" alt="User2 avatar">
                   </p>
                 </div>
                 <div class="media-content">
@@ -933,7 +947,7 @@
               <div class="media">
                 <div class="media-left">
                   <p class="image is-32x32">
-                    <img src="https://source.unsplash.com/random/64x64/?sig=302">
+                    <img src="https://source.unsplash.com/random/64x64/?sig=302" alt="User3 avatar">
                   </p>
                 </div>
                 <div class="media-content">
@@ -955,7 +969,7 @@
               <div class="media">
                 <div class="media-left">
                   <p class="image is-32x32">
-                    <img src="https://source.unsplash.com/random/64x64/?sig=303">
+                    <img src="https://source.unsplash.com/random/64x64/?sig=303" alt="User4 avatar">
                   </p>
                 </div>
                 <div class="media-content">
@@ -977,7 +991,7 @@
               <div class="media">
                 <div class="media-left">
                   <p class="image is-32x32">
-                    <img src="https://source.unsplash.com/random/64x64/?sig=304">
+                    <img src="https://source.unsplash.com/random/64x64/?sig=304" alt="User5 avatar">
                   </p>
                 </div>
                 <div class="media-content">
@@ -999,7 +1013,7 @@
               <div class="media">
                 <div class="media-left">
                   <p class="image is-32x32">
-                    <img src="https://source.unsplash.com/random/64x64/?sig=305">
+                    <img src="https://source.unsplash.com/random/64x64/?sig=305" alt="User6 avatar">
                   </p>
                 </div>
                 <div class="media-content">
@@ -1019,27 +1033,27 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="section has-background-light">
+  <section class="section has-background-light" aria-labelledby="contactsHeading">
     <div class="container">
       <div class="section-heading has-text-centered">
-        <div class="title is-2">Contact us</div>
+        <h2 class="title is-2" id="contactsHeading">Contact us</h2>
         <div class="subtitle is-5">Don't hesitate, ask anything</div>
       </div>
 
       <form class="column is-half is-offset-one-quarter box">
         <div class="field">
-          <label class="label">Name</label>
+          <label class="label" for="your_name">Name</label>
           <div class="control">
-            <input class="input" type="text" placeholder="Text input">
+            <input class="input" type="text" id="your_name" placeholder="Text input">
           </div>
         </div>
 
         <div class="field">
-          <label class="label">Username</label>
+          <label class="label" for="your_user_name">Username</label>
           <div class="control has-icons-left has-icons-right">
-            <input class="input is-success" type="text">
+            <input class="input is-success" id="your_user_name" type="text">
             <span class="icon is-small is-left">
               <i class="fas fa-user"></i>
             </span>
@@ -1051,9 +1065,9 @@
         </div>
 
         <div class="field">
-          <label class="label">Email</label>
+          <label class="label" for="your_email">Email</label>
           <div class="control has-icons-left has-icons-right">
-            <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+            <input class="input is-danger" type="email" id="your_email" placeholder="Email input" value="hello@">
             <span class="icon is-small is-left">
               <i class="fas fa-envelope"></i>
             </span>
@@ -1065,10 +1079,10 @@
         </div>
 
         <div class="field">
-          <label class="label">Subject</label>
+          <label class="label" for="your_subject">Subject</label>
           <div class="control">
             <div class="select">
-              <select>
+              <select id="your_subject">
                 <option>Select dropdown</option>
                 <option>With options</option>
               </select>
@@ -1077,29 +1091,30 @@
         </div>
 
         <div class="field">
-          <label class="label">Message</label>
+          <label class="label" for="your_message">Message</label>
           <div class="control">
-            <textarea class="textarea" placeholder="Textarea"></textarea>
+            <textarea class="textarea" id="your_message" placeholder="Textarea"></textarea>
           </div>
         </div>
 
         <div class="field">
           <div class="control">
-            <label class="checkbox">
-              <input type="checkbox">
-              I agree to the <a>terms and conditions</a>
+            <label class="checkbox" for="t&c">
+              <input type="checkbox" id="t&c">
+              I agree to the <a href="" class="termsconditions">terms and conditions</a>
             </label>
           </div>
         </div>
 
         <div class="field">
-          <div class="control">
-            <label class="radio">
-              <input type="radio" name="question">
+          <div class="control" id="question" role="radiogroup" aria-labelledby="radiogroupid">
+            <span class="visuallyhidden" id="radiogroupid">Radio buttons group</span>
+            <label class="radio" for="radio_opt1">
+              <input type="radio" id="radio_opt1" name="question">
               Yes
             </label>
-            <label class="radio">
-              <input type="radio" name="question">
+            <label class="radio" for="radio_opt2">
+              <input type="radio" id="radio_opt2" name="question">
               No
             </label>
           </div>
@@ -1115,7 +1130,7 @@
         </div>
       </form>
     </div>
-  </div>
+  </section>
 
   <div class="section">
     <div class="container">
@@ -1131,7 +1146,7 @@
               <div class="content">
                 <div class="title is-size-4">Columns</div>
                 <p class="is-size-5 subtitle">
-                  The power of <b>Flexbox</b> in a simple interface
+                  The power of <strong>Flexbox</strong> in a simple interface
                 </p>
               </div>
             </div>
@@ -1148,7 +1163,7 @@
               <div class="content">
                 <div class="title is-size-4">Form</div>
                 <p class="is-size-5 subtitle">
-                  The indispensable <b>form controls</b>, designed for maximum clarity
+                  The indispensable <strong>form controls</strong>, designed for maximum clarity
                 </p>
               </div>
             </div>
@@ -1182,7 +1197,7 @@
               <div class="content">
                 <div class="title is-size-4">Modifiers</div>
                 <p class="is-size-5 subtitle">
-                  An <b>easy-to-read</b> naming system designed for humans
+                  An <strong>easy-to-read</strong> naming system designed for humans
                 </p>
               </div>
             </div>
@@ -1199,7 +1214,7 @@
               <div class="content">
                 <div class="title is-size-4">Layout</div>
                 <p class="is-size-5 subtitle">
-                  Design the <b>structure</b> of your webpage with these CSS classes
+                  Design the <strong>structure</strong> of your webpage with these CSS classes
                 </p>
               </div>
             </div>
@@ -1216,7 +1231,7 @@
               <div class="content">
                 <div class="title is-size-4">Elements</div>
                 <p class="is-size-5 subtitle">
-                  Essential interface elements that only require a <b>single CSS class</b>
+                  Essential interface elements that only require a <strong>single CSS class</strong>
                 </p>
               </div>
             </div>
@@ -1225,57 +1240,68 @@
       </div>
     </div>
   </div>
+  </main>
 
-  <div class="footer">
+  <footer class="footer">
     <div class="container">
       <div class="columns">
         <div class="column is-3 is-offset-2">
-          <div class="is-3 title"><b>Lessons</b></div>
+          <div class="is-3 title"><strong>Lessons</strong></div>
           <ul>
-            <li><a>Lorem ipsum dolor sit amet</a></li>
-            <li><a>Vestibulum errato isse</a></li>
-            <li><a>Lorem ipsum dolor sit amet</a></li>
-            <li><a>Aisia caisia</a></li>
-            <li><a>Murphy's law</a></li>
-            <li><a>Flimsy Lavenrock</a></li>
-            <li><a>Maven Mousie Lavender</a></li>
+            <li><a href="">Lorem ipsum dolor sit amet</a></li>
+            <li><a href="">Vestibulum errato isse</a></li>
+            <li><a href="">Lorem ipsum dolor sit amet</a></li>
+            <li><a href="">Aisia caisia</a></li>
+            <li><a href="">Murphy's law</a></li>
+            <li><a href="">Flimsy Lavenrock</a></li>
+            <li><a href="">Maven Mousie Lavender</a></li>
           </ul>
         </div>
         <div class="column is-3">
-          <div class="is-3 title"><b>News</b></div>
+          <div class="is-3 title"><strong>News</strong></div>
           <ul>
-            <li><a>Labore et dolore magna aliqua</a></li>
-            <li><a>Kanban airis sum eschelor</a></li>
-            <li><a>Modular modern free</a></li>
-            <li><a>The king of clubs</a></li>
-            <li><a>The Discovery Dissipation</a></li>
-            <li><a>Course Correction</a></li>
-            <li><a>Better Angels</a></li>
+            <li><a href="">Labore et dolore magna aliqua</a></li>
+            <li><a href="">Kanban airis sum eschelor</a></li>
+            <li><a href="">Modular modern free</a></li>
+            <li><a href="">The king of clubs</a></li>
+            <li><a href="">The Discovery Dissipation</a></li>
+            <li><a href="">Course Correction</a></li>
+            <li><a href="">Better Angels</a></li>
           </ul>
         </div>
         <div class="column is-4">
-          <div class="is-3 title"><b>Help</b></div>
+          <div class="is-3 title"><strong>Help</strong></div>
           <ul>
-            <li><a>Objects in space</a></li>
-            <li><a>Playing cards with coyote</a></li>
-            <li><a>Goodbye Yellow Brick Road</a></li>
-            <li><a>The Garden of Forking Paths</a></li>
-            <li><a>Future Shock</a></li>
+            <li><a href="">Objects in space</a></li>
+            <li><a href="">Playing cards with coyote</a></li>
+            <li><a href="">Goodbye Yellow Brick Road</a></li>
+            <li><a href="">The Garden of Forking Paths</a></li>
+            <li><a href="">Future Shock</a></li>
           </ul>
         </div>
       </div>
 
       <div class="content has-text-centered">
         <div class="soc">
-          <a><i class="fab fa-github-alt fa-2x"></i></a>
-          <a><i class="fab fa-youtube fa-2x"></i></a>
-          <a><i class="fab fa-facebook fa-2x"></i></a>
-          <a><i class="fab fa-twitter fa-2x"></i></a>
+          <a href=""><i class="fab fa-github-alt fa-2x"></i><span class="visuallyhidden">company github</span></a>
+          <a href=""><i class="fab fa-youtube fa-2x"></i><span class="visuallyhidden">company youtube</span></a>
+          <a href=""><i class="fab fa-facebook fa-2x"></i><span class="visuallyhidden">company facebook</span></a>
+          <a href=""><i class="fab fa-twitter fa-2x"></i><span class="visuallyhidden">company twitter</span></a>
         </div>
-        <p>The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.</p>
+        <p>The source code is licensed <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT</a>.</p>
       </div>
     </div>
-  </div>
+
+    <nav aria-label="Breadcrumbs" class="breadcrumbs">
+      <h4>You could have been find yourself here (if it wasn't main page):</h4>
+      <ul>
+        <li><a href="/">Company main</a> &#8594;</li>
+        <li><a href="/features/">Features</a> &#8594;</li>
+        <li>Javascript</li>
+      </ul>
+    </nav>
+
+  </footer>
 
   <div id="modal-card" class="modal modal-fx-3dSlit">
     <div class="modal-background"></div>
@@ -1283,14 +1309,14 @@
       <div class="card">
         <div class="card-image">
           <div class="image is-4by3">
-            <img src="https://source.unsplash.com/random/?sig=2">
+            <img src="https://source.unsplash.com/random/?sig=2" alt="Modal image 1">
           </div>
         </div>
         <div class="card-content">
           <div class="media">
             <div class="media-left">
               <div class="image is-48x48">
-                <img src="http://www.radfaces.com/images/avatars/linda-barret.jpg">
+                <img src="http://www.radfaces.com/images/avatars/linda-barret.jpg" alt="Modal image 2">
               </div>
             </div>
             <div class="media-content">
@@ -1318,7 +1344,7 @@
   <div id="modal-image1" class="modal modal-fx-3dSlit">
     <div class="modal-background"></div>
     <div class="modal-content is-huge is-image">
-      <img src="https://source.unsplash.com/random/?sig=1">
+      <img src="https://source.unsplash.com/random/?sig=1" alt="Modal image number one">
     </div>
     <button class="modal-close is-large"></button>
   </div>
@@ -1326,7 +1352,7 @@
   <div id="modal-image2" class="modal modal-fx-superScaled">
     <div class="modal-background"></div>
     <div class="modal-content  is-image">
-      <img src="https://source.unsplash.com/random/?sig=3">
+      <img src="https://source.unsplash.com/random/?sig=3" alt="Modal image number two">
     </div>
     <button class="modal-close is-large"></button>
   </div>

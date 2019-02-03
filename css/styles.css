@@ -1,6 +1,43 @@
+/*
+  crossbrowser focus
+*/
+input:focus,
+textarea:focus,
+select:focus,
+button:focus,
+a:focus {
+  box-shadow: 0 0 0 0 #000,
+  0 0 0 2px #000 !important;
+  border-color: #000 !important;
+}
+
+/*
+  skip navigation link
+ */
+.a11y-skip {
+  position:absolute;
+  top:0;
+  left:-9999px;
+  background: #ececec;
+  color: #000;
+  padding: 5px;
+}
+.a11y-skip:focus,
+.a11y-skip:hover {
+  left:0;
+  opacity:1;
+}
+
+/*
+  contrast color for links
+ */
+a {
+  color: #0045b4;
+}
+
 .hero-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://unsplash.it/1200/900?random") no-repeat center center fixed;
+  url("https://unsplash.it/1200/900?random") no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -134,4 +171,109 @@
   .navbar-menu {
     background-color: #888;
   }
+}
+
+/*
+  changes in colors to have proper contrast (siteimprove recomendations)
+ */
+.button.is-info,
+.button.is-link {
+  background-color: #065b92;
+}
+
+.tag:not(body).is-primary {
+  background-color: #065b92;
+}
+
+.subtitle {
+  color: #393939;
+}
+
+.hero.is-info {
+  background-color: #0a629d;
+}
+
+.hero.is-info .subtitle {
+  color: #ffff;
+}
+
+.hero.is-info .tabs a {
+  opacity: 1;
+}
+
+.hero.is-info .tabs.is-boxed li.is-active a,
+.hero.is-info .tabs.is-boxed li.is-active a:hover,
+.hero.is-info .tabs.is-toggle li.is-active a,
+.hero.is-info .tabs.is-toggle li.is-active a:hover {
+  color: #0a629d;
+}
+
+.tag:not(body).is-danger {
+  background-color: #c41111;
+}
+
+.help.is-danger {
+  color: #c41111;
+}
+
+.input.is-danger, .textarea.is-danger {
+  border-color: #c41111;
+}
+
+.tag:not(body).is-success {
+  background-color: #006624;
+}
+
+.help.is-success {
+  color: #006624;
+}
+
+.input.is-success, .textarea.is-success {
+  border-color: #006624;
+}
+
+.has-text-grey-light {
+  color: #444!important;
+}
+
+
+/* Firefox hack */
+.navbar-item img {
+  min-width: 200px;
+}
+
+/* class for visuallu hidden elements */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* other styles */
+.card-content .is-link {
+  margin-right: 10px;
+}
+
+.tabs {
+  overflow: visible;
+  padding-top: 2px;
+}
+
+footer a,
+.termsconditions {
+  text-decoration: underline;
+}
+
+.breadcrumbs {
+  margin-bottom: 10px;
+}
+
+.breadcrumbs ul,
+.breadcrumbs ul li {
+  display: inline;
 }
