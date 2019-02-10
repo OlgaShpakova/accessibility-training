@@ -14,7 +14,8 @@
 
 <body>
   <a href="#top-section" class="a11y-skip">Skip navigation</a>
-  <div class="hero hero-bg is-fullheight">
+
+  <div class="hero hero-bg is-fullheight" aria-labelledby="main-slogan">
     <header class="hero-head">
       <div class="navbar">
         <div class="container">
@@ -22,17 +23,17 @@
             <a class="navbar-item has-text-white" href="/">
               <img src="https://www.epam.com/content/dam/epam/global/logo_white-blue.svg" style="width: 100%;" alt="Company logo">
             </a>
-            <span class="navbar-burger burger" data-target="navbarMenu">
+            <a href="#" class="navbar-burger burger" data-target="navbarMenu" aria-haspopup="true" aria-label="Burger menu">
               <span></span>
               <span></span>
               <span></span>
-            </span>
+            </a>
           </div>
 
           <nav id="navbarMenu" class="navbar-menu" aria-label="Primary">
             <div class="navbar-end">
               <span class="navbar-item">
-                <a class="button is-white is-outlined" href="/">
+                <a class="button is-white is-outlined" href="#">
                   <span class="icon">
                     <i class="fa fa-home"></i>
                   </span>
@@ -40,7 +41,7 @@
                 </a>
               </span>
               <span class="navbar-item">
-                <a class="button is-white is-outlined" href="/">
+                <a class="button is-white is-outlined" href="#">
                   <span class="icon">
                     <i class="fab fa-superpowers"></i>
                   </span>
@@ -48,7 +49,7 @@
                 </a>
               </span>
               <span class="navbar-item">
-                <a class="button is-white is-outlined" href="/">
+                <a class="button is-white is-outlined" href="#">
                   <span class="icon">
                     <i class="fa fa-book"></i>
                   </span>
@@ -56,7 +57,7 @@
                 </a>
               </span>
               <span class="navbar-item">
-                <a class="button is-white is-outlined" href="/">
+                <a class="button is-white is-outlined" href="#">
                   <span class="icon">
                     <i class="fab fa-github"></i>
                   </span>
@@ -73,7 +74,7 @@
     <div class="hero-body">
       <div class="container has-text-centered">
         <div class="column is-6 is-offset-3">
-          <h1 class="title has-text-white">Engineering the Future</h1>
+          <h1 class="title has-text-white" id="main-slogan">Engineering the Future</h1>
           <div class="subtitle has-text-white">
             $this is the best software platform for running an internet business. We handle billions of dollars every year for forward-thinking businesses around the world.
           </div>
@@ -81,7 +82,7 @@
             <form class="field is-grouped" action="#" method="get">
               <p class="control is-expanded">
                 <label class="control is-expanded visuallyhidden" for="usermail"> Your email</label>
-                <input type="text" class="input" id="usermail">
+                <input type="text" class="input" id="usermail" aria-label="Your email">
               </p>
               <p class="control">
                 <label for="getnotifications" class="visuallyhidden">Notify Me</label>
@@ -138,7 +139,7 @@
                 </tr>
                 <tr>
                   <td>Phone:</td>
-                  <td><a href="" title="company phone number">0123-456789</a></td>
+                  <td><a href="#" title="company phone number" aria-describedby="phone-access">0123-456789</a><span class="visuallyhidden" id="phone-access">Company phone number - Please reach us anytime</span></td>
                 </tr>
                 <tr>
                   <td>Email:</td>
@@ -149,8 +150,8 @@
             </div>
             <br>
             <div class="buttons has-addons is-centered">
-              <a class="is-link" href="https://github.com/" target="_blank"><span class="icon is-small"><i class="fas fa-external-link-alt"></i></span> Github</a>
-              <a class="is-link" href="https://www.linkedin.com/" target="_blank"><span class="icon is-small"><i class="fas fa-external-link-alt"></i></span> LinkedIn</a>
+              <a class="is-link" href="https://github.com/" target="_blank"><span class="icon is-small" aria-hidden="true"><i class="fas fa-external-link-alt"></i></span> Github</a>
+              <a class="is-link" href="https://www.linkedin.com/" target="_blank"><span class="icon is-small" aria-hidden="true"><i class="fas fa-external-link-alt"></i></span> LinkedIn</a>
             </div>
           </div>
         </div>
@@ -286,7 +287,7 @@
               <div class="content">
                 <div>Tristique senectus et netus et.</div>
                 <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut consequat semper viverra nam.</p>
-                <p><a href="/">Learn more</a></p>
+                <p><a href="#">Learn more</a></p>
               </div>
             </div>
           </div>
@@ -302,7 +303,7 @@
                 <div>Tempor orci dapibus ultrices in.</div>
                 <p>Ut venenatis tellus in metus vulputate. Amet consectetur adipiscing elit pellentesque. Sed arcu non odio euismod lacinia at quis risus. Faucibus turpis in eu mi bibendum neque egestas cmonsu songue. Phasellus vestibulum lorem
                   sed risus.</p>
-                <p><a href="/">Learn more</a></p>
+                <p><a href="#">Learn more</a></p>
               </div>
             </div>
           </div>
@@ -317,7 +318,7 @@
               <div class="content">
                 <div> Leo integer malesuada nunc vel risus. </div>
                 <p>Imperdiet dui accumsan sit amet nulla facilisi morbi. Fusce ut placerat orci nulla pellentesque dignissim enim. Libero id faucibus nisl tincidunt eget nullam. Commodo viverra maecenas accumsan lacus vel facilisis.</p>
-                <p><a href="/">Learn more</a></p>
+                <p><a href="#">Learn more</a></p>
               </div>
             </div>
           </div>
@@ -333,38 +334,37 @@
         <div class="subtitle">We are always in touch we the outside world</div>
       </div>
     </div>
-    <div class="tabs is-boxed is-centered main-menu" id="nav">
-      <ul>
+    <div class="tabs is-boxed is-centered main-menu" id="tab-nav">
+      <ul role="tablist" aria-label="Tabs">
         <li data-target="pane-1" id="1">
-          <a href="#1">
-            <span class="icon is-small"><i class="fa fa-image"></i></span>
-            <h3>Pictures</h3>
+          <a href="#1" role="tab" aria-controls="pane-1">
+            <span class="icon is-small" aria-hidden="true"><i class="fa fa-image"></i></span>
+            <h3 id="tab-picture">Pictures</h3>
           </a>
         </li>
         <li data-target="pane-2" id="2" class="is-active">
-          <a href="#2">
-            <span class="icon is-small"><i class="fab fa-empire"></i></span>
-            <h3>Article</h3>
+          <a href="#2" role="tab" aria-selected="true" aria-controls="pane-2">
+            <span class="icon is-small" aria-hidden="true"><i class="fab fa-empire"></i></span>
+            <h3 id="tab-article">Article</h3>
           </a>
         </li>
         <li data-target="pane-3" id="3">
-          <a href="#3">
-            <span class="icon is-small"><i class="fab fa-superpowers"></i></span>
-            <h3>Team</h3>
+          <a href="#3" role="tab" aria-controls="pane-3">
+            <span class="icon is-small" aria-hidden="true"><i class="fab fa-superpowers"></i></span>
+            <h3 id="tab-team">Team</h3>
           </a>
         </li>
         <li data-target="pane-4" id="4">
-          <a href="#4">
-            <span class="icon is-small"><i class="fa fa-film"></i></span>
-            <h3>Video</h3>
+          <a href="#4" role="tab" aria-controls="pane-4">
+            <span class="icon is-small" aria-hidden="true"><i class="fa fa-film"></i></span>
+            <h3 id="tab-video">Video</h3>
           </a>
         </li>
       </ul>
     </div>
-  </section>
 
   <div class="tab-content container">
-    <div class="tab-pane level" id="pane-1">
+    <div class="tab-pane level" id="pane-1" role="tabpanel" aria-labelledby="tab-picture">
       <div class="container">
         <div class="columns features">
           <div class="column is-4">
@@ -420,7 +420,7 @@
       </div>
     </div>
 
-    <div class="tab-pane" id="pane-3">
+    <div class="tab-pane" id="pane-3" role="tabpanel" aria-labelledby="tab-team">
       <div class="columns medias">
         <div class="column">
           <div class="media">
@@ -430,7 +430,7 @@
             <div class="media-content">
               <div class="content">
                 <p>
-                  <a href=""><strong>Dominic Ipsum</strong></a>
+                  <a href="#" class="link"><strong>Dominic Ipsum</strong></a>
                   <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
                 </p>
               </div>
@@ -443,7 +443,7 @@
             <div class="media-content">
               <div class="content">
                 <p>
-                  <a href=""><strong>Cassie Ipsum</strong></a>
+                  <a href="#" class="link"><strong>Cassie Ipsum</strong></a>
                   <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
                 </p>
               </div>
@@ -458,7 +458,7 @@
             <div class="media-content">
               <div class="content">
                 <p>
-                  <a href=""><strong>Avery Ipsum</strong></a>
+                  <a href="#" class="link"><strong>Avery Ipsum</strong></a>
                   <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
                 </p>
               </div>
@@ -471,7 +471,7 @@
             <div class="media-content">
               <div class="content">
                 <p>
-                  <a href=""><strong>io Ipsum</strong></a>
+                  <a href="#" class="link"><strong>io Ipsum</strong></a>
                   <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
                 </p>
               </div>
@@ -481,7 +481,7 @@
       </div>
     </div>
 
-    <div class="tab-pane" id="pane-4">
+    <div class="tab-pane" id="pane-4" role="tabpanel" aria-labelledby="tab-article">
       <div class="columns is-centered">
         <div class="column is-three-quarters">
           <div class="title has-text-centered">Inspired video</div>
@@ -492,7 +492,7 @@
       </div>
     </div>
 
-    <div class="tab-pane is-active" id="pane-2">
+    <div class="tab-pane is-active" id="pane-2" role="tabpanel" aria-labelledby="tab-video">
       <div class="content">
         <div class="is-1 title">Hello World</div>
         <p>Lorem ipsum<sup><a>[1]</a></sup> dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque. Sub<sub>script</sub> works as well!</p>
@@ -584,6 +584,7 @@
       </div>
     </div>
   </div>
+  </section>
 
   <section class="section has-background-grey-lighter" aria-labelledby="tourHeading">
     <div class="container has-text-centered">
@@ -598,9 +599,9 @@
             <div class="image">
               <img src="https://source.unsplash.com/random/256x170/?sig=100" alt="New York is calling">
             </div>
-            <p class="title">New York</p>
-            <p class="subtitle">Fri 27 Nov 2016</p>
-            <a href="" class="button">Buy Tickets</a>
+            <p class="title" id="tour1-city">New York</p>
+            <p class="subtitle" id="tour1-date">Fri 27 Nov 2016</p>
+            <a href="" class="button" aria-describedby="tour1-city tour1-date">Buy Tickets</a>
           </div>
         </div>
         <div class="tile is-parent">
@@ -608,9 +609,9 @@
             <div class="image">
               <img src="https://source.unsplash.com/random/256x170/?sig=101" alt="Los Angeles attractions">
             </div>
-            <p class="title">Los Angeles</p>
-            <p class="subtitle">Fri 27 Nov 2016</p>
-            <a href="" class="button">Buy Tickets</a>
+            <p class="title" id="tour2-city">Los Angeles</p>
+            <p class="subtitle" id="tour2-date">Fri 27 Nov 2016</p>
+            <a href="" class="button" aria-describedby="tour2-city tour2-date">Buy Tickets</a>
           </div>
         </div>
         <div class="tile is-parent">
@@ -618,9 +619,9 @@
             <div class="image">
               <img src="https://source.unsplash.com/random/256x170/?sig=102" alt="Have you ever been to Mexico?">
             </div>
-            <p class="title">Mexico</p>
-            <p class="subtitle">Fri 27 Nov 2016</p>
-            <a href="" class="button">Buy Tickets</a>
+            <p class="title" id="tour3-city">Mexico</p>
+            <p class="subtitle" id="tour3-date">Fri 27 Nov 2016</p>
+            <a href="" class="button" aria-describedby="tour3-city tour3-date">Buy Tickets</a>
           </div>
         </div>
       </div>
@@ -631,9 +632,9 @@
             <div class="image">
               <img src="https://source.unsplash.com/random/256x170/?sig=103" alt="Dream Paris">
             </div>
-            <p class="title">Paris</p>
-            <p class="subtitle">Fri 27 Nov 2016</p>
-            <a href="" class="button">Buy Tickets</a>
+            <p class="title" id="tour4-city">Paris</p>
+            <p class="subtitle" id="tour4-date">Fri 27 Nov 2016</p>
+            <a href="" class="button" aria-describedby="tour4-city tour4-date">Buy Tickets</a>
           </div>
         </div>
         <div class="tile is-parent">
@@ -641,9 +642,9 @@
             <div class="image">
               <img src="https://source.unsplash.com/random/256x170/?sig=104" alt="November in Tokio">
             </div>
-            <p class="title">Tokio</p>
-            <p class="subtitle">Fri 27 Nov 2016</p>
-            <a href="" class="button">Buy Tickets</a>
+            <p class="title" id="tour5-city">Tokio</p>
+            <p class="subtitle" id="tour5-date">Fri 27 Nov 2016</p>
+            <a href="" class="button" aria-describedby="tour5-city tour5-date">Buy Tickets</a>
           </div>
         </div>
         <div class="tile is-parent">
@@ -651,9 +652,9 @@
             <div class="image">
               <img src="https://source.unsplash.com/random/256x170/?sig=105" alt="London is the best city in the world">
             </div>
-            <p class="title">London</p>
-            <p class="subtitle">Fri 27 Nov 2016</p>
-            <a href="" class="button">Buy Tickets</a>
+            <p class="title" id="tour6-city">London</p>
+            <p class="subtitle" id="tour6-date">Fri 27 Nov 2016</p>
+            <a href="" class="button" aria-describedby="tour6-city tour6-date">Buy Tickets</a>
           </div>
         </div>
       </div>
@@ -1132,7 +1133,7 @@
     </div>
   </section>
 
-  <div class="section">
+  <div class="section" role="complementary" aria-label="Additional features">
     <div class="container">
       <div class="columns is-multiline">
         <div class="column is-one-third">

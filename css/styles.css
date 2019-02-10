@@ -185,12 +185,27 @@ a {
   background-color: #065b92;
 }
 
-.subtitle {
-  color: #393939;
+.title {
+  color: #121212;
 }
 
-.hero.is-info {
-  background-color: #0a629d;
+.subtitle {
+  color: #232323;
+}
+
+.hero.is-info,
+.hero.is-info .hero-body,
+.hero.is-info .tabs {
+  background-color: #084974;
+}
+
+.hero.is-info .tab-content {
+  background-color: #fff;
+}
+
+.hero.is-info .tab-content,
+.hero.is-info .tab-content .title {
+  color: #000;
 }
 
 .hero.is-info .subtitle {
@@ -201,23 +216,27 @@ a {
   opacity: 1;
 }
 
+.tab-pane .media a.link {
+  text-decoration: underline;
+}
+
 .hero.is-info .tabs.is-boxed li.is-active a,
 .hero.is-info .tabs.is-boxed li.is-active a:hover,
 .hero.is-info .tabs.is-toggle li.is-active a,
 .hero.is-info .tabs.is-toggle li.is-active a:hover {
-  color: #0a629d;
+  color: #023d65;
 }
 
 .tag:not(body).is-danger {
-  background-color: #c41111;
+  background-color: #970505;
 }
 
 .help.is-danger {
-  color: #c41111;
+  color: #970505;
 }
 
 .input.is-danger, .textarea.is-danger {
-  border-color: #c41111;
+  border-color: #970505;
 }
 
 .tag:not(body).is-success {
@@ -236,6 +255,9 @@ a {
   color: #444!important;
 }
 
+.tag:not(body).is-link {
+  background-color: #20055e;
+}
 
 /* Firefox hack */
 .navbar-item img {
@@ -276,4 +298,9 @@ footer a,
 .breadcrumbs ul,
 .breadcrumbs ul li {
   display: inline;
+}
+
+.navbar-burger {
+  background: #ffffff;
+  border:1px solid #000;
 }
