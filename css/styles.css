@@ -300,7 +300,22 @@ footer a,
   display: inline;
 }
 
-.navbar-burger {
+.navbar-burger,
+.navbar-burger:hover,
+.navbar-burger:focus {
   background: #ffffff;
   border:1px solid #000;
+}
+
+/*
+IE11 hack
+ */
+
+.header-logo {
+  width: auto;
+  height: 100%;
+}
+
+.hero.is-fullheight {
+  height: 100px;
 }

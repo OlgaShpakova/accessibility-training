@@ -13,15 +13,15 @@
 </head>
 
 <body>
+  <header>
   <a href="#top-section" class="a11y-skip">Skip navigation</a>
-
   <div class="hero hero-bg is-fullheight" aria-labelledby="main-slogan">
-    <header class="hero-head">
+    <div class="hero-head">
       <div class="navbar">
         <div class="container">
           <div class="navbar-brand">
             <a class="navbar-item has-text-white" href="/">
-              <img src="https://www.epam.com/content/dam/epam/global/logo_white-blue.svg" style="width: 100%;" alt="Company logo">
+              <img class="header-logo" src="https://www.epam.com/content/dam/epam/global/logo_white-blue.svg" style="width: 100%;" alt="Company logo">
             </a>
             <a href="#" class="navbar-burger burger" data-target="navbarMenu" aria-haspopup="true" aria-label="Burger menu">
               <span></span>
@@ -68,7 +68,7 @@
           </nav>
         </div>
       </div>
-    </header>
+    </div>
 
     <div id="top-section">
     <div class="hero-body">
@@ -101,6 +101,7 @@
     </div>
     </div>
   </div>
+  </header>
 
   <main>
   <section class="section" id="about" aria-labelledby="sectionHeading">
@@ -128,8 +129,8 @@
                 <caption><span class="visuallyhidden">Profile data</span></caption>
                 <thead>
                 <tr>
-                  <th></th>
-                  <th></th>
+                  <th><span class="visuallyhidden" aria-hidden="true">Title</span></th>
+                  <th><span class="visuallyhidden" aria-hidden="true">Description</span></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -334,6 +335,11 @@
         <div class="subtitle">We are always in touch we the outside world</div>
       </div>
     </div>
+    <!--
+    I've added role tablist for this widget, also roles "tab" for each tab, aria-controls for each tabpane, but the automatic switch to the appropriate tabpane
+    is now working when going through tabs via keybord because it needs to be done via JS
+    Also assuming this covers 2 steps from Homework  (-	Roles: Apply widget roles for at least one component (e.g. Tabs). and -	Fix accessibility for Tab component: Add correspond roles and wai-aria attributes)
+    -->
     <div class="tabs is-boxed is-centered main-menu" id="tab-nav">
       <ul role="tablist" aria-label="Tabs">
         <li data-target="pane-1" id="1">
@@ -663,7 +669,7 @@
 
   <section class="section" aria-labelledby="serviceHeading">
     <div class="section-heading has-text-centered">
-      <h2 class="title is-2" id="serviceHeading">Services</h2>
+      <h2 class="title is-2" id="serviceHeading" aria-owns="fe be">Services</h2>
       <div class="subtitle is-5">What can I do for you?</div>
     </div>
     <div class="container">
@@ -671,7 +677,7 @@
         <div class="column">
           <a href="" class="box">
             <div class="content">
-              <h5 class="title is-5">Front End Web Development</h5>
+              <h5 class="title is-5" id="fe">Front End Web Development</h5>
               Develop Front End using latest standards with HTML5/CSS3 with added funtionality using JavaScript and
               Vue.js.
             </div>
@@ -680,7 +686,7 @@
         <div class="column">
           <a href="" class="box">
             <div class="content">
-              <h5 class="title is-5">Back End Web Development</h5>
+              <h5 class="title is-5" id="be">Back End Web Development</h5>
               Develop Back End application/service using Node.js or ASP .NET and SQL server or Mongo DB databases.
             </div>
           </a>
@@ -738,8 +744,8 @@
                 </div>
               </div>
               <div class="card-footer">
-                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Preview</span></a>
-                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Source Code</span></a>
+                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small" aria-hidden="true"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Preview</span></a>
+                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small" aria-hidden="true"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Source Code</span></a>
               </div>
             </div>
           </div>
@@ -763,8 +769,8 @@
                 </div>
               </div>
               <div class="card-footer">
-                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Preview</span></a>
-                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Source Code</span></a>
+                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small" aria-hidden="true"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Preview</span></a>
+                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small" aria-hidden="true"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Source Code</span></a>
               </div>
             </div>
           </div>
@@ -788,8 +794,8 @@
                 </div>
               </div>
               <div class="card-footer">
-                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Preview</span></a>
-                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Source Code</span></a>
+                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small" aria-hidden="true"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Preview</span></a>
+                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small" aria-hidden="true"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Source Code</span></a>
               </div>
             </div>
           </div>
@@ -815,8 +821,8 @@
                 </div>
               </div>
               <div class="card-footer">
-                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Preview</span></a>
-                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Source Code</span></a>
+                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small" aria-hidden="true"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Preview</span></a>
+                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small" aria-hidden="true"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Source Code</span></a>
               </div>
             </div>
           </div>
@@ -840,8 +846,8 @@
                 </div>
               </div>
               <div class="card-footer">
-                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Preview</span></a>
-                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Source Code</span></a>
+                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small" aria-hidden="true"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Preview</span></a>
+                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small" aria-hidden="true"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Source Code</span></a>
               </div>
             </div>
           </div>
@@ -865,8 +871,8 @@
                 </div>
               </div>
               <div class="card-footer">
-                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Preview</span></a>
-                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Source Code</span></a>
+                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small" aria-hidden="true"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Preview</span></a>
+                <a href="https://google.com" target="_blank" class="card-footer-item"><span class="icon is-small" aria-hidden="true"><i class="fas fa-external-link-alt"></i></span>&nbsp;<span>Source Code</span></a>
               </div>
             </div>
           </div>
@@ -1043,7 +1049,7 @@
         <div class="subtitle is-5">Don't hesitate, ask anything</div>
       </div>
 
-      <form class="column is-half is-offset-one-quarter box">
+      <form class="column is-half is-offset-one-quarter box" aria-label="User data form">
         <div class="field">
           <label class="label" for="your_name">Name</label>
           <div class="control">
@@ -1054,7 +1060,7 @@
         <div class="field">
           <label class="label" for="your_user_name">Username</label>
           <div class="control has-icons-left has-icons-right">
-            <input class="input is-success" id="your_user_name" type="text">
+            <input class="input is-success" id="your_user_name" type="text" aria-placeholder="Enter your username">
             <span class="icon is-small is-left">
               <i class="fas fa-user"></i>
             </span>
@@ -1068,7 +1074,7 @@
         <div class="field">
           <label class="label" for="your_email">Email</label>
           <div class="control has-icons-left has-icons-right">
-            <input class="input is-danger" type="email" id="your_email" placeholder="Email input" value="hello@">
+            <input class="input is-danger" type="email" id="your_email" placeholder="Email input" value="hello@" aria-invalid="true">
             <span class="icon is-small is-left">
               <i class="fas fa-envelope"></i>
             </span>
@@ -1101,7 +1107,7 @@
         <div class="field">
           <div class="control">
             <label class="checkbox" for="t&c">
-              <input type="checkbox" id="t&c">
+              <input type="checkbox" id="t&c" aria-checked="false">
               I agree to the <a href="" class="termsconditions">terms and conditions</a>
             </label>
           </div>
@@ -1111,11 +1117,11 @@
           <div class="control" id="question" role="radiogroup" aria-labelledby="radiogroupid">
             <span class="visuallyhidden" id="radiogroupid">Radio buttons group</span>
             <label class="radio" for="radio_opt1">
-              <input type="radio" id="radio_opt1" name="question">
+              <input type="radio" id="radio_opt1" name="question" aria-checked="false">
               Yes
             </label>
             <label class="radio" for="radio_opt2">
-              <input type="radio" id="radio_opt2" name="question">
+              <input type="radio" id="radio_opt2" name="question" aria-checked="false">
               No
             </label>
           </div>
