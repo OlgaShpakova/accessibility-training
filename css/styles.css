@@ -193,9 +193,7 @@ a {
   color: #232323;
 }
 
-.hero.is-info,
-.hero.is-info .hero-body,
-.hero.is-info .tabs {
+.hero.is-info {
   background-color: #084974;
 }
 

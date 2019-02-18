@@ -23,11 +23,11 @@
             <a class="navbar-item has-text-white" href="/">
               <img class="header-logo" src="https://www.epam.com/content/dam/epam/global/logo_white-blue.svg" style="width: 100%;" alt="Company logo">
             </a>
-            <a href="#" class="navbar-burger burger" data-target="navbarMenu" aria-haspopup="true" aria-label="Burger menu">
+            <button class="navbar-burger burger" data-target="navbarMenu" aria-haspopup="true" aria-label="Burger menu">
               <span></span>
               <span></span>
               <span></span>
-            </a>
+            </button>
           </div>
 
           <nav id="navbarMenu" class="navbar-menu" aria-label="Primary">
@@ -335,42 +335,37 @@
         <div class="subtitle">We are always in touch we the outside world</div>
       </div>
     </div>
-    <!--
-    I've added role tablist for this widget, also roles "tab" for each tab, aria-controls for each tabpane, but the automatic switch to the appropriate tabpane
-    is now working when going through tabs via keybord because it needs to be done via JS
-    Also assuming this covers 2 steps from Homework  (-	Roles: Apply widget roles for at least one component (e.g. Tabs). and -	Fix accessibility for Tab component: Add correspond roles and wai-aria attributes)
-    -->
     <div class="tabs is-boxed is-centered main-menu" id="tab-nav">
       <ul role="tablist" aria-label="Tabs">
-        <li data-target="pane-1" id="1">
-          <a href="#1" role="tab" aria-controls="pane-1">
+        <li data-target="pane-1" id="1" role="presentation">
+          <a href="#1" role="tab" aria-controls="pane-1" aria-selected="false" tabindex="-1">
             <span class="icon is-small" aria-hidden="true"><i class="fa fa-image"></i></span>
-            <h3 id="tab-picture">Pictures</h3>
+            <span id="tab-picture">Pictures</span>
           </a>
         </li>
-        <li data-target="pane-2" id="2" class="is-active">
-          <a href="#2" role="tab" aria-selected="true" aria-controls="pane-2">
+        <li data-target="pane-2" id="2" class="is-active" role="presentation">
+          <a href="#2" role="tab" aria-controls="pane-2" aria-selected="true">
             <span class="icon is-small" aria-hidden="true"><i class="fab fa-empire"></i></span>
-            <h3 id="tab-article">Article</h3>
+            <span id="tab-article">Article</span>
           </a>
         </li>
-        <li data-target="pane-3" id="3">
-          <a href="#3" role="tab" aria-controls="pane-3">
+        <li data-target="pane-3" id="3" role="presentation">
+          <a href="#3" role="tab" aria-controls="pane-3" aria-selected="false" tabindex="-1">
             <span class="icon is-small" aria-hidden="true"><i class="fab fa-superpowers"></i></span>
-            <h3 id="tab-team">Team</h3>
+            <span id="tab-team">Team</span>
           </a>
         </li>
-        <li data-target="pane-4" id="4">
-          <a href="#4" role="tab" aria-controls="pane-4">
+        <li data-target="pane-4" id="4" role="presentation">
+          <a href="#4" role="tab" aria-controls="pane-4" aria-selected="false" tabindex="-1">
             <span class="icon is-small" aria-hidden="true"><i class="fa fa-film"></i></span>
-            <h3 id="tab-video">Video</h3>
+            <span id="tab-video">Video</span>
           </a>
         </li>
       </ul>
     </div>
 
   <div class="tab-content container">
-    <div class="tab-pane level" id="pane-1" role="tabpanel" aria-labelledby="tab-picture">
+    <div class="tab-pane level" id="pane-1" role="tabpanel" aria-labelledby="tab-picture" hidden="hidden">
       <div class="container">
         <div class="columns features">
           <div class="column is-4">
@@ -426,7 +421,7 @@
       </div>
     </div>
 
-    <div class="tab-pane" id="pane-3" role="tabpanel" aria-labelledby="tab-team">
+    <div class="tab-pane" id="pane-3" role="tabpanel" aria-labelledby="tab-team" hidden="hidden">
       <div class="columns medias">
         <div class="column">
           <div class="media">
@@ -487,7 +482,7 @@
       </div>
     </div>
 
-    <div class="tab-pane" id="pane-4" role="tabpanel" aria-labelledby="tab-article">
+    <div class="tab-pane" id="pane-4" role="tabpanel" aria-labelledby="tab-article" hidden="hidden">
       <div class="columns is-centered">
         <div class="column is-three-quarters">
           <div class="title has-text-centered">Inspired video</div>
