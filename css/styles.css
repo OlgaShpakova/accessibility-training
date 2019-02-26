@@ -317,3 +317,9 @@ IE11 hack
 .hero.is-fullheight {
   height: 100px;
 }
+
+
+/* Registration form */
+.hidden {
+    display: none;
+}

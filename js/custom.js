@@ -156,4 +156,160 @@
 	  }
   }
 
+
+
+
+
+  var regUsersArray = [],
+	  usersNicknames = [],
+	  usersNames = [],
+	  isValid = false,
+	  isBirthField = false,
+	  form = document.getElementById('register-form'),
+	  inputs = document.querySelectorAll('.required');
+
+  form.addEventListener("submit", function(e) {
+  	e.preventDefault();
+
+  	var forSubmit = null;
+
+    forSubmit = (regUsersArray.length > 0) ? extendedValidation(inputs) : validateInputs(inputs);
+ 
+  	if (forSubmit){
+      removeAlerts();
+      hideNotifications();
+      document.getElementById("success-submit").classList.remove("hidden");
+      document.getElementById("success-submit").setAttribute('aria-hidden', false);
+      storeInputData(inputs);
+      document.getElementById("registered-users").innerHTML = regUsersArray;
+      document.getElementById("registered-users").classList.remove("hidden");
+      if (isBirthField) {
+      	isBirthField = false;
+      	document.getElementById("birthyear").classList.remove("required");
+		document.getElementById("extended-validation-field").classList.add("hidden");
+		document.getElementById("extended-validation-field").setAttribute('aria-hidden', true);
+	  }
+  	}
+    else {
+      addAlert();
+    }
+  });
+
+  function validateInputs(el) {
+	  var phoneRegExp = /^[0-9]+$/,
+		  emailRegExp = /^.+@.+\..+$/;
+
+	  for (x = 0; x < el.length; x++) {
+		  if (el[x].value === '') {
+			  setDangerState(el[x]);
+			  isValid = false;
+		  }
+		  else {
+			  setSuccessState(el[x]);
+			  isValid = true;
+		  }
+	  }
+
+	  if (!phoneRegExp.test(el[3].value)) {
+		  setDangerState(el[3]);
+		  document.getElementById("phone-error").classList.remove("hidden");
+		  document.getElementById("phone-error").setAttribute('aria-hidden', false);
+		  isValid = false;
+	  }
+	  else {
+		  setSuccessState(el[3]);
+		  document.getElementById("phone-error").classList.add("hidden");
+		  document.getElementById("phone-error").setAttribute('aria-hidden', true);
+	  }
+
+	  if (!emailRegExp.test(el[5].value)) {
+		  setDangerState(el[5]);
+		  document.getElementById("email-error").classList.remove("hidden");
+		  document.getElementById("email-error").setAttribute('aria-hidden', false);
+		  isValid = false;
+	  }
+	  else {
+		  setSuccessState(el[5]);
+		  document.getElementById("email-error").classList.add("hidden");
+		  document.getElementById("email-error").setAttribute('aria-hidden', true);
+	  }
+
+	  return isValid;
+  }
+
+  function setDangerState(field) {
+	  field.classList.remove('is-success');
+	  field.classList.add('is-danger');
+	  field.setAttribute('aria-invalid', 'true');
+  }
+
+  function setSuccessState(field) {
+	  field.classList.remove('is-danger');
+	  field.classList.add('is-success');
+	  field.setAttribute('aria-invalid', 'false');
+  }
+
+  function extendedValidation(el) {
+	  var userName = el[1].value +" "+ el[2].value,
+		  inputs = document.querySelectorAll('.required');
+
+	  validateInputs(inputs);
+
+	  if (usersNicknames.indexOf(el[0].value) > -1){
+		  setDangerState(el[0]);
+		  document.getElementById("nickname-error").classList.remove("hidden");
+		  document.getElementById("nickname-error").setAttribute('aria-hidden', false);
+		  isValid = false;
+	  }
+	  else if (usersNames.indexOf(userName) > -1 && !isBirthField){
+		  hideNotifications();
+		  document.getElementById("birthyear").classList.add("required");
+		  document.getElementById("extended-validation-field").classList.remove("hidden");
+		  document.getElementById("extended-validation-field").setAttribute('aria-hidden', false);
+		  document.getElementById("extended-field-warning").classList.remove("hidden");
+		  document.getElementById("extended-field-warning").setAttribute('aria-hidden', false);
+		  isBirthField = true;
+		  isValid = false;
+	  }
+	  return isValid;
+  }
+
+  function addAlert() {
+    removeAlerts();
+    var newAlert = document.createElement("p");
+    newAlert.setAttribute("role", "alert");
+    newAlert.setAttribute("id", "alert");
+    var msg = document.createTextNode('Please enter correct data');
+    newAlert.appendChild(msg);
+    document.getElementById('general-error').appendChild(newAlert).focus();
+    document.getElementById("success-submit").classList.add("hidden");
+	document.getElementById("success-submit").setAttribute('aria-hidden', true);
+  }
+
+  function removeAlerts() {
+    var oldAlert = document.getElementById("alert");
+    if (oldAlert){
+      document.getElementById('general-error').removeChild(oldAlert);
+    }
+  }
+
+  function hideNotifications() {
+    document.getElementById("success-submit").classList.add("hidden");
+    document.getElementById("success-submit").setAttribute('aria-hidden', true);
+    document.getElementById("nickname-error").classList.add("hidden");
+    document.getElementById("nickname-error").setAttribute('aria-hidden', true);
+  	document.getElementById("extended-field-warning").classList.add("hidden");
+  	document.getElementById("extended-field-warning").setAttribute('aria-hidden', true);
+	setSuccessState(inputs[0]);
+  }
+
+  function storeInputData(el) {
+	  for (x = 0; x < el.length; x++) {
+		  regUsersArray.push(el[x].value);
+	  }
+	  usersNicknames.push(el[0].value);
+	  usersNames.push(el[1].value +" "+ el[2].value);
+	  //window.localStorage.setItem('regUsers',regUsersArray);
+  }
+
 })();

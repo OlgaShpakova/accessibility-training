@@ -14,7 +14,7 @@
 
 <body>
   <header>
-  <a href="#top-section" class="a11y-skip">Skip navigation</a>
+  <a href="#register-form-container" class="a11y-skip">Skip to register form</a>
   <div class="hero hero-bg is-fullheight" aria-labelledby="main-slogan">
     <div class="hero-head">
       <div class="navbar">
@@ -49,11 +49,11 @@
                 </a>
               </span>
               <span class="navbar-item">
-                <a class="button is-white is-outlined" href="#">
+                <a class="button is-white is-outlined" href="#register-form-container">
                   <span class="icon">
                     <i class="fa fa-book"></i>
                   </span>
-                  <span>Documentation</span>
+                  <span>Register form</span>
                 </a>
               </span>
               <span class="navbar-item">
@@ -1037,100 +1037,75 @@
     </div>
   </section>
 
-  <section class="section has-background-light" aria-labelledby="contactsHeading">
+  <section class="section has-background-light" aria-labelledby="registerHeading" id="register-form-container">
     <div class="container">
       <div class="section-heading has-text-centered">
-        <h2 class="title is-2" id="contactsHeading">Contact us</h2>
-        <div class="subtitle is-5">Don't hesitate, ask anything</div>
+        <h2 class="title is-2" id="registerHeading">Register your student</h2>
+        <div class="subtitle is-5">here</div>
       </div>
 
-      <form class="column is-half is-offset-one-quarter box" aria-label="User data form">
-        <div class="field">
-          <label class="label" for="your_name">Name</label>
-          <div class="control">
-            <input class="input" type="text" id="your_name" placeholder="Text input">
+      <form class="column is-half is-offset-one-quarter box" id="register-form" aria-label="User data form">
+          <div id="general-error" class="help is-danger" tabindex="-1"></div>
+          <div class="field">
+              <label class="label" for="nickname">Nickname <span aria-hidden="true">*</span></label>
+              <div class="control">
+                <input class="input required" type="text" id="nickname" name="nickname" placeholder="Type your nickname" aria-required="true">
+              </div>
+              <p id="nickname-error" class="help is-danger hidden" role="alert">Nickname is already taken, please enter new one</p>
           </div>
-        </div>
-
-        <div class="field">
-          <label class="label" for="your_user_name">Username</label>
-          <div class="control has-icons-left has-icons-right">
-            <input class="input is-success" id="your_user_name" type="text" aria-placeholder="Enter your username">
-            <span class="icon is-small is-left">
-              <i class="fas fa-user"></i>
-            </span>
-            <span class="icon is-small is-right">
-              <i class="fas fa-check"></i>
-            </span>
+          <div class="field">
+              <label class="label" for="name">Name <span aria-hidden="true">*</span></label>
+              <div class="control">
+                  <input class="input required" type="text" id="name" name="name" placeholder="Type your name" aria-required="true">
+              </div>
           </div>
-          <p class="help is-success">This username is available</p>
-        </div>
-
-        <div class="field">
-          <label class="label" for="your_email">Email</label>
-          <div class="control has-icons-left has-icons-right">
-            <input class="input is-danger" type="email" id="your_email" placeholder="Email input" value="hello@" aria-invalid="true">
-            <span class="icon is-small is-left">
-              <i class="fas fa-envelope"></i>
-            </span>
-            <span class="icon is-small is-right">
-              <i class="fas fa-exclamation-triangle"></i>
-            </span>
+          <div class="field">
+              <label class="label" for="surname">Surname <span aria-hidden="true">*</span></label>
+              <div class="control">
+                  <input class="input required" type="text" id="surname" name="surname" placeholder="Type your surname" aria-required="true">
+              </div>
           </div>
-          <p class="help is-danger">This email is invalid</p>
-        </div>
-
-        <div class="field">
-          <label class="label" for="your_subject">Subject</label>
-          <div class="control">
-            <div class="select">
-              <select id="your_subject">
-                <option>Select dropdown</option>
-                <option>With options</option>
-              </select>
-            </div>
+          <div class="field">
+              <label class="label" for="phonenumber">Phone number <span aria-hidden="true">*</span></label>
+              <div class="control">
+                  <input class="input required" type="text" id="phonenumber" name="phonenumber" placeholder="Type your phone number" aria-required="true">
+              </div>
+              <p id="phone-error" role="alert" aria-hidden="true" class="help is-danger hidden">Please enter correct phone number</p>
           </div>
-        </div>
-
-        <div class="field">
-          <label class="label" for="your_message">Message</label>
-          <div class="control">
-            <textarea class="textarea" id="your_message" placeholder="Textarea"></textarea>
+          <div class="field">
+              <label class="label" for="address">Address <span aria-hidden="true">*</span></label>
+              <div class="control">
+                  <input class="input required" type="text" id="address" name="address" placeholder="Type your address" aria-required="true">
+              </div>
           </div>
-        </div>
-
-        <div class="field">
-          <div class="control">
-            <label class="checkbox" for="t&c">
-              <input type="checkbox" id="t&c" aria-checked="false">
-              I agree to the <a href="" class="termsconditions">terms and conditions</a>
-            </label>
+          <div class="field">
+              <label class="label" for="postcode">Postcode</label>
+              <div class="control">
+                  <input class="input" type="text" id="postcode" name="postcode" placeholder="Type your postcode">
+              </div>
           </div>
-        </div>
-
-        <div class="field">
-          <div class="control" id="question" role="radiogroup" aria-labelledby="radiogroupid">
-            <span class="visuallyhidden" id="radiogroupid">Radio buttons group</span>
-            <label class="radio" for="radio_opt1">
-              <input type="radio" id="radio_opt1" name="question" aria-checked="false">
-              Yes
-            </label>
-            <label class="radio" for="radio_opt2">
-              <input type="radio" id="radio_opt2" name="question" aria-checked="false">
-              No
-            </label>
+          <div class="field">
+              <label class="label" for="email">Email <span aria-hidden="true">*</span></label>
+              <div class="control">
+                  <input class="input required" type="text" id="email" name="email" placeholder="Type your email" aria-required="true">
+              </div>
+              <p id="email-error" role="alert" aria-hidden="true" class="help is-danger hidden">Please enter correct email address</p>
           </div>
-        </div>
-
-        <div class="field is-grouped">
-          <div class="control">
-            <button class="button is-link">Submit</button>
+          <div class="field hidden" id="extended-validation-field" aria-hidden="true">
+              <label class="label" for="birthyear">Birth Year <span aria-hidden="true">*</span></label>
+              <div class="control">
+                  <input class="input" type="text" id="birthyear" name="birthyear" placeholder="Type your birth year">
+              </div>
+              <p id="extended-field-warning" role="alert" aria-hidden="true" class="help is-danger hidden">These name and surname are already in the database, if you want to proceed with them, please enter the year of your birth (for example 1900)</p>
           </div>
-          <div class="control">
-            <button class="button is-text">Cancel</button>
+          <div class="field">
+              <div class="control">
+                <input type="submit" id="register-form-submit" class="button is-link" value="Submit"/>
+              </div>
+              <p id="success-submit" role="alert" aria-hidden="true" class="help is-success hidden">Congrats! User is successfully added!</p>
           </div>
-        </div>
       </form>
+      <div class="hidden" id="registered-users"></div>
     </div>
   </section>
 

@@ -1,0 +1,11 @@
+Skip link with link to the Register Form;
+Menu item with Register Form;
+
+Possible scenarios:
+- do not enter any field, press Submit - error messages announced (general for all fields + additional for special validation - phone and email);
+- fill all the fields with chars, press Submit - error messages announced (general for all fields + additional for special validation - phone and email);
+- fill all the fields with correct data, press Submit - success message announced, data is displayed under the form (the simpliest way);
+- change first name, press Submit - error messages announced (general + specific alert for nickname field);
+- change nickname, press Submit - success message announced, data is added under the form;
+- change nickname, press Submit -  new field Birth Year appears, error messages announced (general + specific alert for new field);
+- fill birth year field with correct data, press Submit - success message announced, data is displayed under the form (the simpliest way);
